@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default="en",
+    parser.addoption('--language', action='store', default="en-gb",
                      help="Choose language")
 
 
@@ -14,7 +14,6 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
     browser = webdriver.Chrome(options=options)
-    browser.get("http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/")
     browser.implicitly_wait(5)
     yield browser
     browser.quit()
