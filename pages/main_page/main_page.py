@@ -1,7 +1,6 @@
-from .base_page import BasePage
-from selenium.webdriver.common.by import By
+from TestPageObj.pages.base_page import BasePage
 from .main_page_locators import MainPageLocators as Loc
-from .login_page import LoginPage
+from TestPageObj.pages.login_page.login_page import LoginPage
 
 
 class MainPage(BasePage):
