@@ -1,3 +1,4 @@
 .DS_Store
 .environments
 .venv
+.__pycache__
